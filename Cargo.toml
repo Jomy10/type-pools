@@ -1,0 +1,14 @@
+[package]
+name = "type-pools"
+version = "0.1.0"
+edition = "2021"
+authors = ["Jonas Everaert"]
+description = "A data structure to store values of multiple types"
+homepage = "https://github.com/jomy10/type-pools"
+repository = "https://github.com/jomy10/type-pools"
+keywords = ["data structures", "data structure", "types", "type erase", "box"]
+categories = ["data-structures"]
+
+[dependencies]
+
+
