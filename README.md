@@ -17,7 +17,7 @@ pools.push("Hello world");
 // Query values
 let int_pool = pools.type_pool::<u32>().unwrap();
 let int_value: u32 = int_pool.values[0];
-let string_value: &str = pools.get(0).unwrap();
+let string_value: &str = pools.get::<&str>(0).unwrap();
 ```
 
 ## License

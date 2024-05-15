@@ -209,5 +209,24 @@ mod tests {
         assert_eq!(*pools.get::<&str>(0).unwrap(), "Hello");
         assert_eq!(*pools.get::<&str>(1).unwrap(), "World");
     }
+
+    #[test]
+    fn test_example() {
+        // Create a Type Pools structure
+        let mut pools = TypePools::new();
+
+        // Adding values
+        pools.push(1 as u32);
+        pools.push(2 as u32);
+        pools.push("Hello world");
+
+        // Query values
+        let int_pool = pools.type_pool::<u32>().unwrap();
+        let int_value: u32 = int_pool.values[0];
+        let string_value: &str = pools.get::<&str>(0).unwrap();
+
+        assert_eq!(int_value, 1);
+        assert_eq!(string_value, "Hello world");
+    }
 }
 
