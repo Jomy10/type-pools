@@ -106,36 +106,6 @@ impl TypePools {
     pub fn shrink_to_fit(&mut self) {
         self.pools.shrink_to_fit()
     }
-
-    
-
-    // /// Returns `None` when the type does not exist in the pools
-    // pub fn reserve<T: 'static>(&mut self, additional: usize) -> Option<()> {
-    //     self.type_pool_mut()
-    //         .map(|p: &mut TypePool<T>| p.values.reserve(additional))
-    // }
-    //
-    // pub fn reserve_exact<T: 'static>(&mut self, additional: usize) -> Option<()> {
-    //     self.type_pool_mut()
-    //         .map(|p: &mut TypePool<T>| p.values.reserve_exact(additional))
-    // }
-    //
-    // pub fn try_reserve<T: 'static>(&mut self, additional: usize) -> Option<Result<(), TryReserveError>> {
-    //     self.type_pool_mut()
-    //         .map(|p: &mut TypePool<T>| p.values.try_reserve(additional))
-    // }
-    //
-    // pub fn try_reserve_exact<T: 'static>(&mut self, additional: usize) -> Option<Result<(), TryReserveError>> {
-    //     self.type_pool_mut()
-    //         .map(|p: &mut TypePool<T>| p.values.try_reserve_exact(additional))
-    // }
-    //
-    // pub fn shrink_to_fit<T: 'static>(&mut self) -> Option<()> {
-    //     self.type_pool_mut()
-    //         .map(|p: &mut TypePool<T>| p.values.shrink_to_fit())
-    // }
-
-    // TODO: implement other vec methods
 }
 
 trait TypePoolTrait {
